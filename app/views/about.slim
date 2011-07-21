@@ -1,0 +1,39 @@
+!doctype html
+html lang="en"
+  head
+    meta content="text/html; charset=utf-8" http-equiv="Content-Type"
+    title About Me
+    == include_css 'about'
+    == include_js :jquery, 'app'
+  body        
+    #menu-wrap
+      #menu-bg  
+      == partial "partials/menu"   
+    article
+      section#sidebar 
+        #sidebar-inner
+          == partial "partials/contact"      
+          .not-contact
+            h2 Find Me on
+            ul.ulReset#find-me-details
+              li.twitter     
+                .icon.abouticons-twitter.hideTxt twitter
+                a href="http://twitter.com/b00kworm" twitter: b00kworm    
+              li.forrst     
+               .icon.abouticons-forrst.hideTxt forrst
+               a href="http://forrst.me/bookworm" forrst: bookworm  
+              li.github  
+               .icon.abouticons-github.hideTxt github
+               a href="http://github.com/bookworm" github: bookworm
+              li.lovedsgn  
+               .icon.abouticons-lovedsgn.hideTxt loveDsgn
+               a href="http://lovedsgn.comp/profile/bookworm" lovedsgn: bookworm
+              li.gplus 
+                .icon.abouticons-gplus.hideTxt gplus
+                a href="http://gplus.to/bookworm" gplus: bookworm       
+      a#logo.hideTxt href="http://kerickson.me" Logo       
+      section.main
+        p 
+          | I'm working on it.
+    == partial "partials/footer"
+    .clearfix

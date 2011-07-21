@@ -1,0 +1,48 @@
+!doctype html
+html lang="en"
+  head
+    meta content="text/html; charset=utf-8" http-equiv="Content-Type"
+    title The personal site of Ken Erickson AKA Bookworm.    
+    == include_css 'index'
+    == include_js :jquery, 'app'
+  body     
+    #menu-wrap
+      #menu-bg
+      == partial "partials/menu"
+    #sidebar 
+      #sidebar-inner       
+        == partial "partials/contact"
+        a#logo.hideTxt href="http://kerickson.me" Logo     
+    article.main   
+      .label-wrap.in-sidebar#about-label-wrap 
+        h3.label 
+          img src="/images/avatar.png"
+        .icon 
+      section#short-about
+        p 
+          | Part <a href="http://notes.kerickson.me/my-philosophy" class="human red">human(ist)</a> part <a 
+            href="http://github.com/bookworm" class="developer blue">developer</a> &amp; some parts 
+            <a href="http://bookwormproductions.net" class="designer green">designer</a>. 
+            I'm an obsessive autodidact and when I'm not coding or designing I'm learning something new. I run a one-person dev/design 
+            company <a href="http://designbreakdown.com" class="breakdown dark">Design BreakDown</a> and I spend most of my time 
+            <a href="http://github.com/bookworm" class="developer blue">open sourcing</a> DBD 
+            projects. 
+    #recent-posts-wrap    
+      .sidebar-content#recent-posts-label-wrap
+        h3.label.in-sidebar recent posts
+        .icon     
+        .clearfix    
+        .stats
+          .post-count
+            .stat-label posts: 
+            .value.posts-count= Post.count  
+        a#more-posts href="http://notes.kerickson.me" More Posts          
+      ul#recent-posts.ulReset
+        - @posts.each_with_index do |@post, @index|
+          li class="#{post_class}"
+            .date= @post.created_at.strftime("%b/%d/")   
+            a.title-link href==@post.url 
+              h2.title= @post.title
+            .icon 
+    == partial "partials/footer"  
+    .clearfix    
