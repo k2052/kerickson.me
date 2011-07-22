@@ -14,5 +14,5 @@ timeout 30
 pid "/home/vagrant/me/me/pids/unicorn.pid"
 
 # Logs are very useful for trouble shooting, use them 
-stderr_path "/var/log/unicorn/stderr.log"
-stdout_path "/var/log/unicorn/stdout.log"
+# stderr_path "/var/log/unicorn/stderr.log"
+# stdout_path "/var/log/unicorn/stdout.log"
