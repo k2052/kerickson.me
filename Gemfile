@@ -5,7 +5,8 @@ source :gemcutter
 # gem 'thin' or mongrel
 
 # Project requirements
-gem 'rake'
+gem 'rake' 
+gem "vlad"
 
 # Component requirements
 gem 'compass'
