@@ -38,7 +38,9 @@ html lang="en"
             .value.posts-count= Post.count  
         a#more-posts href="http://notes.kerickson.me" More Posts          
       ul#recent-posts.ulReset
-        - @posts.each_with_index do |@post, @index|
+        - @posts.each_with_index do |post, index|   
+          - @post = post
+          - @index = index
           li class="#{post_class}"
             .date= @post.created_at.strftime("%b/%d/")   
             a.title-link href==@post.url 
