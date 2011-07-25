@@ -2,7 +2,7 @@
 worker_processes 2 
 
 # Help ensure your application will always spawn in the symlinked "current" directory that Capistrano sets up
-working_directory "/home/vagrant/me/me" 
+working_directory "/home/root/kerickson.me/me" 
 
 # Listen on a Unix domain socket, use the default backlog size
 listen "/tmp/me.sock", :backlog => 1024
@@ -11,7 +11,7 @@ listen "/tmp/me.sock", :backlog => 1024
 timeout 30
 
 # Lets keep our process id's in one place for simplicity  
-pid "/home/vagrant/me/me/pids/unicorn.pid"
+pid "/home/root/kerickson.me/me/pids/unicorn.pid"
 
 # Logs are very useful for trouble shooting, use them 
 # stderr_path "/var/log/unicorn/stderr.log"
