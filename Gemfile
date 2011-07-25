@@ -20,7 +20,11 @@ gem 'kramdown'
 gem 'nokogiri'  
 gem 'redis'
 gem 'redis-store'   
-gem 'fog'
+gem 'fog'    
+
+platforms :mri_18 do
+  gem "system_timer", ">= 1.0"
+end   
 
 # Test requirements
 gem 'shoulda', :group => "test"
