@@ -6,8 +6,8 @@ PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)    
-Encoding.default_internal = nil
-Encoding.default_external = nil
+Encoding.default_internal = :ASCII_8BIT
+Encoding.default_external = :ASCII_8BIT
 
 ##
 # Enable devel logging
