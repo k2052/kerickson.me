@@ -5,7 +5,7 @@ class Me < Padrino::Application
   register AssetHatInitializer
   register Padrino::Cache   
   
-  enable :caching if Padrino.env == :production
+  enable :caching 
   
   set :cache, Padrino::Cache::Store::Redis.new(::Redis.new)
 end
