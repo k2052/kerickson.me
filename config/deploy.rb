@@ -68,8 +68,7 @@ namespace :vlad do
   end   
   
   remote_task :restart_nginx do    
-    run "sudo /etc/init.d/nginx stop"
-    run "sudo /etc/init.d/nginx start"
+    run "sudo /etc/init.d/nginx restart"
   end   
   
   task :create_mongodb_dump do

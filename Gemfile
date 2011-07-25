@@ -11,7 +11,6 @@ gem "vlad"
 # Component requirements
 gem 'compass'
 gem 'slim', "~> 0.9.2"
-gem 'SystemTimer', :require => "system_timer"
 gem 'mongo_mapper'      
 gem 'mongomapper_ext', :git => "git://github.com/bookworm/mongomapper_ext.git"
 gem 'bson_ext', :require => "mongo"
