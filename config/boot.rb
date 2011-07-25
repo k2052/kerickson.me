@@ -1,5 +1,3 @@
-Encoding.default_internal = "ASCII-8BIT"
-Encoding.default_external = "ASCII-8BIT"
 # Defines our constants
 PADRINO_ENV  = ENV["PADRINO_ENV"] ||= ENV["RACK_ENV"] ||= "development"  unless defined?(PADRINO_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
