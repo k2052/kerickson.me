@@ -1,6 +1,6 @@
 ## Intro
 
-Source code for http://kerickson.ne. 
+Source code for http://kerickson.me. 
 
 ## Installation/Setup
 
