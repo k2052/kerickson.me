@@ -29,8 +29,10 @@ class Post
     self[:body_src].length
   end   
   
-  def stupids()  
-    (chars / 6) / self.notes.count / self.links.count
+  def stupids() 
+    notes_count = 1 if self.notes.count == 0
+    links_count =  1 if self.links.count == 0  
+    (chars / 6) / notes_count / links_count
   end  
   
   def doc
