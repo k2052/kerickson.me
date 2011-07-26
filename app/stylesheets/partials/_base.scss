@@ -143,8 +143,8 @@ body, select, input, textarea { color: #444 }
 
 @font-face {
 	font-family: 'Pictos';
-	src: url('../fonts/pictos-web.eot');
-	src: local('☺'), url('../fonts/pictos-web.woff') format('woff'), url('../fonts/pictos-web.ttf') format('truetype'), url('../fonts/pictos-web.svg#webfontIyfZbseF') format('svg');
+	src: url('http://kerickson.me/fonts/pictos-web.eot');
+	src: local('☺'), url('http://kerickson.me/fonts/pictos-web.woff') format('woff'), url('http://kerickson.me/fonts/pictos-web.ttf') format('truetype'), url('http://kerickson.me/fonts/pictos-web.svg#webfontIyfZbseF') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }  
