@@ -18,12 +18,12 @@ module CompassInitializer
       config.http_images_path = config.http_path + "images"
 
       if Padrino.env == :production   
-        config.http_path = "http://assets0-" + ENV['DOMAIN'] 
+        config.http_path = "http://assets0." + ENV['DOMAIN'] 
         config.images_dir = "public/images"          
         config.http_images_path = "/" + 'images'
         config.relative_assets  = false   
         config.asset_host do |asset|
-          "http://assets%d-#{ENV['DOMAIN']}" % (asset.hash % 4)
+          "http://assets%d.#{ENV['DOMAIN']}" % (asset.hash % 4)
         end        
         config.output_style = :compressed     
       end
