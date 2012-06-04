@@ -1,5 +1,3 @@
-require 'kramdown' 
-require 'nokogiri'
 class Post
   include MongoMapper::Document 
   include MongoMapperExt::Slugizer      
