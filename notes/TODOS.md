@@ -1,6 +1,6 @@
 > Update gems
-- swap out assethat
-- move around assets  
+> swap out assethat
+> move around assets  
 > drop old stylesheets
 > drop old views
 > drop post_class helper
