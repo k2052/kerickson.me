@@ -1,4 +1,3 @@
-# encoding: utf-8
 require 'mongo_mapper'
 
 module CarrierWave
@@ -24,5 +23,5 @@ module CarrierWave
   end # MongoMapper
 end # CarrierWave
 
-MongoMapper::Plugins::EmbeddedDocument::ClassMethods.send(:include, CarrierWave::MongoMapper)
 MongoMapper::Plugins::Document::ClassMethods.send(:include, CarrierWave::MongoMapper)
+MongoMapper::Plugins::EmbeddedDocument::ClassMethods.send(:include, CarrierWave::MongoMapper)
