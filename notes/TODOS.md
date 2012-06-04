@@ -1,0 +1,23 @@
+> Update gems
+- swap out assethat
+- move around assets  
+- drop old stylesheets
+- drop old views
+- drop post_class helper
+- drop resque
+- drop unnecessary deployment stuff. heroku ftw        
+- go over lib
+- drop js
+- drop public css
+- drop old images   
+- base styles + grid
+- view
+  - home
+  - default menu
+  - posts short list 
+  - notes page
+  - note
+  - notes pages menu
+- write test for API
+- write test for MAIN
+- write test for POSTS 
