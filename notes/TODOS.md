@@ -6,7 +6,7 @@
 - drop post_class helper
 - drop resque
 - drop unnecessary deployment stuff. heroku ftw        
-- go over lib
+> go over lib
 - drop js
 - drop public css
 - drop old images   
