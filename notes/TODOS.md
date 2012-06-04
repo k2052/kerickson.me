@@ -1,15 +1,14 @@
 > Update gems
 - swap out assethat
 - move around assets  
-- drop old stylesheets
-- drop old views
-- drop post_class helper
-- drop resque
-- drop unnecessary deployment stuff. heroku ftw        
+> drop old stylesheets
+> drop old views
+> drop post_class helper
+> drop resque
 > go over lib
-- drop js
-- drop public css
-- drop old images   
+> drop js
+> drop public css
+> drop old images   
 - base styles + grid
 - view
   - home
