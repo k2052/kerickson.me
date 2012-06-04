@@ -8,13 +8,6 @@ require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)    
 
 ##
-# Enable devel logging
-#
-# Padrino::Logger::Config[:development] = { :log_level => :devel, :stream => :stdout }
-# Padrino::Logger.log_static = true
-#
-
-##
 # Add your before load hooks here
 #
 Padrino.before_load do 
