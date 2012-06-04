@@ -1,7 +1,7 @@
 connection = Fog::Storage.new(
   :provider                 => 'AWS',
   :aws_secret_access_key    => ENV['S3_SECRET_ACCESS_KEY'],
-  :aws_access_key_id => ENV['S3_ACCESS_KEY']
+  :aws_access_key_id        => ENV['S3_ACCESS_KEY']
 )         
 
 namespace :assets do 
