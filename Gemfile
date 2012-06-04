@@ -1,34 +1,44 @@
-source :rubygems       
-source :gemcutter
+source :rubygems
 
 # Server requirements
-# gem 'thin' or mongrel
+gem 'thin'
 
 # Project requirements
-gem 'rake' 
-gem "vlad"
+gem 'rake'
+gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
-gem 'compass'
-gem 'slim', "~> 0.9.2"
-gem 'mongo_mapper'      
-gem 'mongomapper_ext', :git => "git://github.com/bookworm/mongomapper_ext.git"
-gem 'bson_ext', :require => "mongo"
-gem 'asset_hat', :git => 'git://github.com/bookworm/asset_hat.git'
-gem 'carrierwave'    
-gem 'kramdown'
-gem 'nokogiri'  
-gem 'redis'
-gem 'redis-store'   
-gem 'fog'    
+gem 'slim'       
+gem 'airbrake'  
+gem 'carrierwave'
+gem 'paginator'     
+gem 'magic'  
+gem 'redcarpet' 
 
-platforms :mri_18 do
-  gem "system_timer", ">= 1.0"
-end   
+# DB           
+gem 'tzinfo'
+gem 'mongo_mapper'  
+gem 'mongomapper_ext', :git => "git://github.com/bookworm/mongomapper_ext.git" 
+gem 'bcrypt-ruby', :require => "bcrypt"
+gem 'bson_ext', :require => "mongo"        
 
-# Test requirements
-gem 'shoulda', :group => "test"
-gem 'rack-test', :require => "rack/test", :group => "test"
+# Assets 
+gem 'compass'  
+gem 'sprockets' 
+gem 'coffee-script'  
+gem 'uglifier' 
+gem 'padrino-sprockets', :git => 'git://github.com/bookworm/padrino-sprockets.git'     
+gem 'padrino-assethelpers', :git => 'git://github.com/bookworm/padrino-assethelpers.git'             
+gem 'padrino-responders', :git => 'git://github.com/bookworm/padrino-responders.git'
+gem 'yajl-ruby', :require => 'yajl'          
 
-# Padrino EDGE
-gem 'padrino', :git => 'git://github.com/bookworm/padrino-framework.git'    
+# Test requirements      
+group :test do
+  gem 'minitest', "~>2.6.0", :require => "minitest/autorun", :group => "test"  
+  gem 'mini_shoulda', :require => 'mini_shoulda', :group => "test"    
+  gem 'rack-test', :require => "rack/test", :group => "test"  
+  gem 'ffaker'   
+end
+
+# Or Padrino Edge
+gem 'padrino',  :git => 'git://github.com/bookworm/padrino-framework.git'
