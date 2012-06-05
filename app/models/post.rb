@@ -8,7 +8,6 @@ class Post
   key :title,     String
   key :body,      String
   key :intro,     String   
-  key :mistakes,  Integer
   
   # Key Settings
   slug_key :title
