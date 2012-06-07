@@ -1,0 +1,12 @@
+ul.notes_list        
+  - @notes.each do |note|
+    - if Padrino.env == :production   
+      - url = "http://notes.kerickson.me/#{note.slug}"
+    - else
+      - url = "/notes/#{note.slug}"
+    li.note.tk-pt-sans-narrow           
+      a.title_wrap.tk-pt-sans-narrow href=url  
+        h2.title
+          == note.title              
+        span class="note_icon icon #{note.class.to_s.downcase}" icon           
+        .line

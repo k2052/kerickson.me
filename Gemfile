@@ -5,22 +5,24 @@ gem 'thin'
 
 # Project requirements
 gem 'rake'
-gem 'sinatra-flash', :require => 'sinatra/flash'
+gem 'sinatra-flash', :require => 'sinatra/flash'  
 
 # Component requirements
 gem 'slim'       
 gem 'airbrake'  
-gem 'carrierwave'
 gem 'paginator'     
 gem 'magic'  
-gem 'redcarpet' 
+gem 'redcarpet'  
+gem 'escape_utils', :require => 'escape_utils'   
+gem 'topsy'
 
 # DB           
 gem 'tzinfo'
 gem 'mongo_mapper'  
 gem 'mongomapper_ext', :git => "git://github.com/bookworm/mongomapper_ext.git" 
 gem 'bcrypt-ruby', :require => "bcrypt"
-gem 'bson_ext', :require => "mongo"        
+gem 'bson_ext', :require => "mongo"         
+gem 'redis', :require => 'redis'
 
 # Assets 
 gem 'compass'  
@@ -33,11 +35,16 @@ gem 'padrino-responders', :git => 'git://github.com/bookworm/padrino-responders.
 gem 'yajl-ruby', :require => 'yajl'          
 
 # Test requirements      
-group :test do
+group :test do  
+  gem 'fog'
   gem 'minitest', "~>2.6.0", :require => "minitest/autorun", :group => "test"  
   gem 'mini_shoulda', :require => 'mini_shoulda', :group => "test"    
   gem 'rack-test', :require => "rack/test", :group => "test"  
-  gem 'ffaker'   
+  gem 'ffaker', :require => 'ffaker'
+end   
+
+group :development do
+  gem 'fog'
 end
 
 # Or Padrino Edge

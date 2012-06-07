@@ -19,9 +19,9 @@ Source code for http://kerickson.me.
       ENV['DOMAIN'] = 'localhost:3000' 
     end  
     if Padrino.env == :production
-      ENV['BLOG_DOMAIN'] = 'kerickson.me/notes' 
+      ENV['NOTES_DOMAIN'] = 'kerickson.me/notes' 
     else      
-      ENV['BLOG_DOMAIN'] = 'localhost:3000/notes' 
+      ENV['NOTES_DOMAIN'] = 'localhost:3000/notes' 
     end  
   end      
 
@@ -49,7 +49,7 @@ To understand how to setup your server paths correctly and to understand my depl
 
 ## License
 
-Copyright (C) 2009-2010 Ken Erickson AKA Bookworm. (http://bookwormproductions.net)
+Copyright (C) 2009-2012 Ken Erickson AKA Bookworm. (http://bookwormproductions.net)
 
 Media License.    
  

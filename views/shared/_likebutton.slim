@@ -1,0 +1,9 @@
+a#like_button href==url(:notes, :like, :slug => @note.slug)
+  span.icon icon  
+  - if @note.liked?(@env['REMOTE_ADDR'])   
+    span.text Liked
+  - else
+    span.text Like
+  #likes.count 
+    .count_side  
+      .count_text==@note.likes        

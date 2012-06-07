@@ -1,0 +1,13 @@
+ul.notes_list        
+  - @notes.each do |note|
+    li.note            
+      a.title_wrap href==url(:notes, :show, :slug => note.slug)  
+        h2.title
+          == note.title   
+      span class="icon note_icon #{note.class.to_s.downcase}" icon
+      .line     
+      .intro.tk-pt-sans== note.intro
+.pagination  
+  - if @notes.next?
+    a.more.button href==url(:notes, :index, :page => @notes.next.number) 
+      span More Notes    

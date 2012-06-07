@@ -1,0 +1,9 @@
+- full_url = "http://#{ENV['DOMAIN']}#{url(:notes, :show, :slug => @note.slug)}"
+- twitter_url = "https://twitter.com/intent/tweet"  
+
+a href=="#{twitter_url}?text=#{@note.title}text&amp;url=#{EscapeUtils.escape_url(full_url)}&amp;via=b00kworm" target=="_blank"
+  span.icon icon    
+  span.text Tweet  
+  .count
+    .count_side
+      .count_text==Topsy.stats(full_url).all

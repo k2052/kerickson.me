@@ -1,0 +1,87 @@
+select                                { background-color: transparent }
+html                                  { height: 100%; overflow-y: scroll; }
+body                                  { height: 100%; background: #fff; color: #444; line-height: 1.4; }
+body, input, button, textarea, select { font-family: "Palatino Linotype", Freeserif, serif; letter-spacing: .05em; }
+h1, h2, h3, h4, h5, h6                { font-family: Georgia, "DejaVu Serif", serif; letter-spacing: .1em; }
+pre, tt, code, kbd, samp, var         { font-family: "Courier New", Courier, monospace }   
+
+h1                 { font-size: 1.5em }
+h2                 { font-size: 1.4em }
+h3                 { font-size: 1.3em }
+h4                 { font-size: 1.2em }
+h5                 { font-size: 1.1em }
+h6                 { font-size: 1em }
+h1, h2, h3, h4, h5 { font-weight: normal }
+
+a:link            { color: #000 }
+a:visited         { text-decoration: none }
+a:hover           { text-decoration: none }
+a:focus           { text-decoration: none }
+a:focus, :focus   { outline: 1px dotted #000 }
+a:hover, a:active { outline: none }
+
+body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset, img  { border: 0 }
+img            { vertical-align: bottom }
+
+ol li, ul ol li { list-style-type: decimal }
+ul li           { list-style-type: disc }
+ul ul li        { list-style-type: circle }
+ul ul ul li     { list-style-type: square }
+ol ol li        { list-style-type: lower-alpha }
+ol ol ol li     { list-style-type: lower-roman }
+
+sub            { line-height: 0; vertical-align: sub; font-size: smaller; }
+sup            { line-height: 0; vertical-align: super; font-size: smaller; }
+legend         { color: #000; padding-bottom: .5em; }
+table          { border-collapse: collapse; border-spacing: 0; }
+caption        { position: absolute; left: -999em; }
+
+th             { text-align: center }
+tbody th       { text-align: left }
+
+code           { color: #06f }
+code, pre      { font-family: "Courier New", monospace, serif; font-size: 1em; }
+
+blockquote, q, em, cite, dfn, i, cite, var, address
+                                        { font-style: italic }
+blockquote p:before, blockquote p:after, q:before, q:after
+                                        { content: '' }
+th, strong, dt, b                       { font-weight: bold }
+
+ins                                     { text-decoration: none; border-bottom: 3px double #333; }
+del                                     { text-decoration: line-through }
+abbr, acronym                           { border-bottom: 1px dotted #333; font-variant: normal; }
+h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl, fieldset, address
+                                        { padding: 0 30px }
+
+dd p, dd pre, dd ul, dd ol, dd dl, li p, li pre, li ul, li ol, li dl, fieldset p, fieldset ul, fieldset ol
+                                        { padding-right: 0; padding-left: 0; }
+dd                                      { padding-left: 20px; margin-top: .5em; }
+li                                      { margin-left: 30px }
+table                                   { margin-right: 30px; margin-left: 30px; }
+hr                                      { margin-right: 30px; margin-left: 30px; border-style: inset; border-width: 1px; }
+                
+h1, h2, h3, h4, h5, h6, p, pre, dt, li, hr, legend, input, button, textarea, select, address, table { margin-top: 1.2em; }
+
+label                                   { padding-top: 1.2em }
+fieldset                                { line-height: 1 }
+input[type="checkbox"]                  { vertical-align: text-bottom; *vertical-align: baseline; }
+input[type="radio"]                     { vertical-align: bottom }
+input                                   { _vertical-align: text-bottom }
+input, button, textarea, select, optgroup, option
+                                        { font: inherit; text-transform: inherit; line-height: inherit !important; }
+select                                  { background-color: transparent }
+button, input[type="submit"], input[type="reset"], input[type="button"], .inputButton
+                                        { *overflow: visible; _width: 0; padding: .2em .4em; }
+
+.block          { padding: 0 30px; margin-top: 1.2em; }
+.padding2margin { margin-right: 30px; margin-left: 30px; padding-right: 0; padding-left: 0; }
+.noMarker li    { list-style: none; margin-left: 0; }  
+.hideTxt, .icon { text-indent: -9999px; display: block; }
+.clear          { clear: both } 
+:focus          { outline: 0 !important; }

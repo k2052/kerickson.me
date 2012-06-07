@@ -1,4 +1,4 @@
- # Vlad aint it lovely?
+# Vlad aint it lovely?
 # We need the following for this to work.
 # Git installed on remote server, Nginx installed on remote server, Sudo perimissions on remote server
 # Thin installed on remote server, and of course Vlad installed locally and remotely  

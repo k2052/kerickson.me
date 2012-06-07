@@ -1,15 +1,13 @@
+ENV["REDIS_URL"] = 'redis://kerickson:@localhost:6379' 
 if defined?(Padrino.env)
   if Padrino.env == :production  
-    ENV['DOMAIN'] = 'kerickson.me'  
+    ENV['DOMAIN']       = 'kerickson.me'  
+    ENV['NOTES_DOMAIN'] = 'kerickson.me/notes' 
   else
-    ENV['DOMAIN'] = 'localhost:3000' 
+    ENV['DOMAIN']       = 'localhost:3000' 
+    ENV['NOTES_DOMAIN'] = 'localhost:3000/notes'     
   end  
-  if Padrino.env == :production
-    ENV['BLOG_DOMAIN'] = 'kerickson.me/notes' 
-  else      
-    ENV['BLOG_DOMAIN'] = 'localhost:3000/notes' 
-  end  
-end      
+end    
 
 ENV['ASSET_HOST']           = "http://assets%d.kerickson.me"  
 ENV['ASSET_HOST_COUNT']     = '4' 

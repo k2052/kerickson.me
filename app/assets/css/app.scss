@@ -1,0 +1,299 @@
+@import "partials/shared"; 
+@import "compass/reset/utilities"; 
+@import "compass/css3/opacity";    
+@import "compass/css3/border-radius";
+@import "logos/*.png";    
+@import "icons/*.png"; 
+
+      a { color: #220d00; }
+a:hover { @include opacity(0.8) }
+
+#intro {
+  font-size: 42px;
+  color: #220d00;
+  line-height: 63px;    
+  margin-top: 54px;
+  margin-bottom: 40px;
+}  
+
+.linesep {
+  height: 6px;    
+  background-color: #000;
+  @include opacity(0.48);
+}
+
+.main
+{     
+  #header { margin-top: 35px; }     
+  
+  #menu 
+  {
+    @include nested-reset;  
+    float: right;  
+    margin-top: 28px;    
+
+    li 
+    {   
+      @include reset-list-style;
+      float: left;
+      margin-right: 115px;
+
+      a 
+      {      
+        font-size: 18px;  
+        text-transform: uppercase;
+        font-weight: bold;   
+        text-decoration: none;
+        color: #190c00;    
+        @include opacity(1.0);       
+
+        &:hover {
+          @include opacity(0.6);
+        }
+      }
+    } 
+    
+    li:last-child { margin-right: 0px; }
+  }
+  
+  #logo {   
+     @include logos-sprite(small); 
+     width: 78px;
+     height: 74px;       
+     float: left;
+  }
+}   
+   
+.notes, .note_wrap { margin: 26px auto 0 auto; }   
+       .notes_list { padding: 0px; }     
+
+.notes_list li, #note 
+{ 
+  @include reset-list-style;  
+  margin: 0px;
+  width: 100%;
+  float: left;        
+  
+  .title_wrap {
+    margin-bottom: 32px;      
+    text-decoration: none;  
+    display: block;    
+    float: left; 
+    padding-right: 200px;   
+  }                
+  
+  .line {
+    background: image-url('bg-dashed.png') repeat;
+    height: 1px;
+    width: 100%;  
+    float: left;
+  }   
+  
+   a:hover .line { background: none; }
+  a:hover .title { @include opacity(0.8); }   
+  
+  .title {      
+    padding: 0px;
+    margin: 0px;
+    display: block;     
+    float: left;   
+    font-size: 24px;    
+    color: #2a2119;    
+    line-height: 48px; 
+  }
+  
+  .note_icon {
+    @include icons-sprite(permalink);  
+    width: 16px;
+    height: 16px;   
+    display: block;   
+    float: left;     
+    margin: 14px 0 0 14px;
+  }
+}
+
+#footer { margin-top: 26px; }
+
+#copyright 
+{
+  font-size: 13px;  
+  padding-bottom: 32px;   
+  
+  em { font-weight: bold; }    
+}     
+
+.notes_page .container, .note_page .container { margin-top: 35px; }    
+
+.notes_page .notes_list 
+{     
+           li { margin-bottom: 40px; }
+  .title_wrap { margin-bottom: 0px; }   
+        .icon { float: right; }  
+}   
+
+.notes_list .intro, #note .body {
+  margin-top: 24px;
+  float: left;
+  font-size: 15px;
+  line-height: 25px; 
+  color: #190c00;   
+}
+
+#sidebar
+{ 
+  text-align: center;  
+        
+  #logo {
+    float: left;   
+    width: 107px;
+    height: 101px;
+    @include logos-sprite(large); 
+  }       
+  
+  #menu 
+  {
+    @include nested-reset;  
+    float: left;   
+    width: 107px;
+    margin-top: 14px;
+    
+    li 
+    {   
+      @include reset-list-style;
+      float: left;    
+      width: 100%; 
+      height: 25px;        
+      
+      a { 
+        text-decoration: none;
+        font-size: 16px;
+        color: #190c00;  
+        text-transform: lowercase;
+      }   
+    }   
+  }  
+  
+  #rss {    
+    margin-top: 18px;
+    width: 107px;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}  
+
+.button 
+{   
+  font-family: "PT Sans Bold", "PT Sans", "Helvetica Neu", Helvetica, sans-serif !important;  
+  font-weight: bold;
+  font-size: 16px;   
+  padding: 4px 8px 4px 8px;
+  color: #190c00;   
+  display: block; 
+  text-decoration: none;    
+  float: right; 
+  @include border-radius(6px);  
+ 
+  border: 3px solid #000 !important;    
+  
+  background-color: rgba(25, 12, 0, 0.1);   
+
+  &:hover {        
+    background-color: rgba(25, 12, 0, 0.0);    
+    span { color: #000 !important; }
+  }  
+  
+  span {
+    display: block;
+    margin: 6px 16px 6px 16px;  
+  }  
+} 
+
+#note
+{
+  .date {  
+    font-weight: bold; 
+    font-size: 14px;   
+    line-height: 29px;
+  }  
+  
+  .title_wrap { margin-bottom: 0px; }  
+   .note_icon { float: right; position: relative; margin-left: 0px; }  
+  
+  .meta
+  {
+    float: left;         
+    margin: 35px 0 10px 0;    
+    
+    ul { padding: 0px; }
+        
+    li {        
+      margin-left: 0px;
+      @include reset-list-style;
+      float: left;
+    }
+  }
+}     
+
+#social 
+{
+  a { 
+    font-size: 12px !important; 
+    color: #190c00;  
+    text-decoration: none;    
+    display: block;   
+    text-transform: uppercase;   
+    float: left;
+  }  
+  
+  .text, .icon {
+    display: block;  
+    float: left;
+  } 
+  
+  .text { margin: -2px 0 0 5px; }      
+  
+  li {
+    float: left;
+    margin-right: 30px;
+  }    
+  
+  .count {     
+    text-align: center;
+    color: #fff;
+    height: 20px;
+    float: left;
+    margin: -4px 0 0 30px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #000;     
+    padding-right: 10px;
+  } 
+  
+  .count_side {  
+    min-width: 10px;
+    height: 20px;
+    background: image-url('count-bg.png') no-repeat;      
+    margin-left: -10px;
+    float: left;
+  }  
+  
+  .count_text { margin: 2px 0 0 13px; }
+}   
+  #tweet .icon {
+    @include icons-sprite(tweet); 
+    width: 14px;
+    height: 11px;
+  }  
+  
+  #tweet:hover .icon { @include icons-sprite(tweet-hover); }     
+
+  #like .icon {
+    @include icons-sprite(heart); 
+    width: 11px;
+    height: 10px;  
+  }    
+  
+  #like:hover .icon, #like.liked .icon {  
+    @include icons-sprite(heart-hover); 
+  }

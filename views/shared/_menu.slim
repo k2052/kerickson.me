@@ -1,0 +1,14 @@
+ul
+  li.notes   
+    - if Padrino.env == :production
+      a href=="http://#{ENV['NOTES_DOMAIN']}" NOTES  
+    - else     
+      a href=="/notes" NOTES  
+  li.notes 
+    a href=="http://twitter.com/b00kworm" TWITTER
+  li.notes 
+    a href=="http://github.com/bookworm" GITHUB
+  li.notes 
+    a href=="http://dribbble.com/bookworm" DRIBBBLE
+  li.mail
+    a.mail href=="mailto:bookworm.productions@gmail.com" MAIL    

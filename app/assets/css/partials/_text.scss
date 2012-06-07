@@ -1,0 +1,12 @@
+.tk-pt-sans         { font-family: "PT Sans", "Helvetica Neu", Helvetica, sans-serif !important }
+.tk-pt-sans-bold    { font-family: "PT Sans Bold", "PT Sans", "Helvetica Neu", Helvetica, sans-serif !important }
+.tk-pt-sans-caption { font-family: "PT Sans Caption", "PT Sans", "Helvetica Neu", Helvetica, sans-serif !important }
+.tk-pt-sans-narrow  { font-family: "PT Sans Narrow", "PT Sans Caption", "PT Sans", "Helvetica Neu", Helvetica, sans-serif !important }
+
+body               { background: image-url('bg.jpg') repeat; color: #220d00; }
+h1, h2, h3, h4, h5 { color: #2A2119; padding: 0px; margin-top: 0px; }
+h1                 { font-size: 32px; line-height: 48px; margin-bottom: 12px; }
+h2                 { font-size: 22px; line-height: 33px; margin-bottom: 12px; }
+h3                 { font-size: 18px; line-height: 26px; margin-bottom: 12px; }
+p                  { margin-top: 0px; padding: 0px; margin-bottom: 15px; }
+ul                 { margin-bottom: 15px }

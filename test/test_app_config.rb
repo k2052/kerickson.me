@@ -5,10 +5,6 @@ class MiniTest::Unit::TestCase
   include Rack::Test::Methods
 
   def app
-    ##
-    # You can handle all padrino applications using instead:
-    #   Padrino.application
     Me.tap { |app|  }         
   end
 end
-

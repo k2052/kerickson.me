@@ -1,0 +1,21 @@
+- content_for :js do
+  == js :note   
+  
+- if @note.liked?(@env['REMOTE_ADDR'])   
+  - liked_class = "liked" 
+- else
+  - liked_class = "like" 
+     
+#note        
+  .date.tk-pt-sans== "POSTED AT #{@note.created_at.strftime("%b %d, %Y")}" 
+  .title_wrap href==url(:notes, :show, :slug => @note.slug)  
+    h1.title
+      == @note.title   
+  a class="note_icon icon #{@note.class.to_s.downcase}" href==url(:notes, :show, :slug => @note.slug) icon      
+  .line
+  .body.tk-pt-sans== @note.body  
+  .clear 
+  .meta
+    ul#social.tk-pt-sans
+      li#tweet== partial "shared/tweetbutton"
+      li#like class==liked_class == partial "shared/likebutton"                                    

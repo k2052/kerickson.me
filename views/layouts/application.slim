@@ -1,0 +1,27 @@
+doctype 5
+html lang="en" 
+  head           
+    meta charset="UTF-8"   
+    link rel="icon" type="image/png" href="/images/favicon.png" 
+    - if Padrino.env == :production         
+      link rel="alternate" type="application/rss+xml" title="Ken Erickson's Notes" href=="/rss"
+    - else
+      link rel="alternate" type="application/rss+xml" title="Ken Erickson's Notes" href=="/notes/rss"
+    title== (defined?(@title) ? @title : "Ken Erickson AKA Bookworm")
+    == css :app     
+    - if Padrino.env == :production 
+      |
+        <script type="text/javascript" src="http://use.typekit.com/ntp2cks.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  body.main    
+    #header.container 
+      a#logo.hideTxt href=="http://#{ENV['DOMAIN']}" Ken Erickson
+      #menu.tk-pt-sans-bold== partial "shared/menu"   
+    .clear     
+    .main.container
+      == yield      
+    - if @notes.count > 0
+      .linesep.container
+      .notes.container== partial "notes/list"      
+      .clear
+      #footer.container== partial "shared/footer"    
